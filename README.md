@@ -1,0 +1,1 @@
+# Minecraft server status bot for Discord
