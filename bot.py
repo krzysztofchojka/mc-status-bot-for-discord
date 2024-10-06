@@ -247,14 +247,7 @@ async def status(interaction: discord.Interaction):
 # Define the /ping slash command with role restriction
 @bot.tree.command(name="ping", description="Ping command")
 async def ping(interaction: discord.Interaction):
-    role_name = "szyszka"
-    
-    # Check if user has the required role
-    user_roles = [role.name for role in interaction.user.roles]
-    if role_name in user_roles:
         await interaction.response.send_message("pong")
-    else:
-        await interaction.response.send_message("You do not have permission to use this command.", ephemeral=True)
 
 # Event to resume updating status message on bot restart
 @bot.event
